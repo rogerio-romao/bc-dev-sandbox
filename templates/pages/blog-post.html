@@ -1,8 +1,19 @@
-{{#partial "page"}}
-
-{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
-
+{{#partial "page"}} {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
 {{> components/blog/post post=blog.post show_tags=true is_blog_post=true}}
+{{/partial}} {{> layout/base}}
 
-{{/partial}}
-{{> layout/base}}
+<style>
+    .responsive-video-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+        height: 0;
+        overflow: hidden;
+    }
+    .responsive-video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+</style>
